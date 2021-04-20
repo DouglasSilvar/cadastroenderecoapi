@@ -1,12 +1,9 @@
 package com.zup.zup.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.Instant;
+
 
 @Entity
 @Table(name = "tb_address")
@@ -30,7 +27,8 @@ public class Address implements Serializable {
 
     public Address(){}
 
-    public Address(Long id, String cep, String complemento, String numero, String logradouro, String bairro, String localidade, String uf, User client) {
+    public Address(Long id, String cep, String complemento, String numero,
+                   String logradouro, String bairro, String localidade, String uf, User client) {
         this.id = id;
         this.cep = cep;
         this.complemento = complemento;
